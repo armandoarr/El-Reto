@@ -8,11 +8,10 @@ import colorsys
 
 #matplotlib inline
 
-imagen = Image.open("./i-see-no-god.png")
+imagen = Image.open("./Screenshot.png")
 RGBarr = np.asarray(imagen)
-#imagen.show()
-print imagen.size
 
+#print imagen.size
 #print imagen.size, imagen.mode, imagen.format
 
 #imagengris = imagen.convert('L')
@@ -23,22 +22,27 @@ print imagen.size
 
 xs, ys = imagen.size
 
-newRGB = np.tile(1, (ys, xs, 3))
+newRGB = np.full_like(RGBarr, 1)
+
+#newRGB = np.zeros((ys, xs, 3))
 
 
 red = RGBarr[..., 0]
-blue = RGBarr[..., 2]
 green = RGBarr[...,1]
+blue = RGBarr[..., 2]
 
+#newRGB[...] = (blue, green, red)
 newRGB[..., 0] = blue 
-newRGB[..., 2] = red
 newRGB[..., 1] = green
+newRGB[..., 2] = red
 
-nueva = Image.fromarray(newRGB, 'RGB')
+nueva = Image.fromarray(newRGB)
 
-nueva.save('nueva.png')
+nueva.save('nueva1.png')
 
 nueva.show() 
 
-print nueva.size
+#print nueva.size
 
+#print newRGB[..., 0]
+#print RGBarr[..., 2]
