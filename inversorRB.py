@@ -11,6 +11,7 @@ import colorsys
 imagen = Image.open("./i-see-no-god.png")
 RGBarr = np.asarray(imagen)
 #imagen.show()
+print imagen.size
 
 #print imagen.size, imagen.mode, imagen.format
 
@@ -22,7 +23,8 @@ RGBarr = np.asarray(imagen)
 
 xs, ys = imagen.size
 
-newRGB = np.tile(0,(xs, ys, 3))
+newRGB = np.tile(1, (ys, xs, 3))
+
 
 red = RGBarr[..., 0]
 blue = RGBarr[..., 2]
@@ -38,4 +40,5 @@ nueva.save('nueva.png')
 
 nueva.show() 
 
+print nueva.size
 
