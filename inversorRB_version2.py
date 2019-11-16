@@ -3,13 +3,13 @@
 from __future__ import division 
 from PIL import Image 
 import numpy as np 
-import matplotlib.pyplot as plt 
-import colorsys
+#import matplotlib.pyplot as plt 
+#import colorsys
 
 #matplotlib inline
 
-path = str(raw_input("En donde se encuentra la imagen?"))
-nombre = str(raw_input("Como se llama el archivo?"))
+path = str(raw_input("En donde se encuentra la imagen? "))
+nombre = str(raw_input("Como se llama el archivo? "))
 #nuevo_nombre = str(raw_input("Nombre de la imagen nueva:"))
 
 imagen = Image.open(path+nombre)
