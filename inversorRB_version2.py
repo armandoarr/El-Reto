@@ -3,35 +3,31 @@
 from __future__ import division 
 from PIL import Image 
 import numpy as np 
-#import matplotlib.pyplot as plt 
-#import colorsys
+import os
 
-#matplotlib inline
 
 path = str(raw_input("En donde se encuentra la imagen? "))
 nombre = str(raw_input("Como se llama el archivo? "))
 #nuevo_nombre = str(raw_input("Nombre de la imagen nueva:"))
 
-imagen = Image.open(path+nombre)
-RGBarr = np.asarray(imagen)
-
-xs, ys = imagen.size
-
-newRGB = np.full_like(RGBarr, 1)
-
-#newRGB = np.zeros((ys, xs, 3))
+imagen = Image.open(os.path.join(path, nombre))
+RGB = np.asarray(imagen)
 
 
-red = RGBarr[..., 0]
-green = RGBarr[...,1]
-blue = RGBarr[..., 2]
+#newRGB = np.full_like(RGB, 1)
 
-#newRGB[...] = (blue, green, red)
-newRGB[..., 0] = blue 
-newRGB[..., 1] = green
-newRGB[..., 2] = red
+BGR = RGB[...,::-1]
 
-nueva = Image.fromarray(newRGB, 'RGB')
+#red = RGB[..., 0]
+#green = RGB[...,1]
+#blue = RGB[..., 2]
+
+
+#newRGB[..., 0] = blue 
+#newRGB[..., 1] = green
+#newRGB[..., 2] = red
+
+nueva = Image.fromarray(BGR, 'RGB')
 
 nueva.save('new.png')
 
