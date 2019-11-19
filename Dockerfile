@@ -6,5 +6,3 @@ RUN pip install Pillow
 RUN pip install numpy==1.16.2
 
 CMD [ "python", "./inversorRB_version2.py" ]
-
-

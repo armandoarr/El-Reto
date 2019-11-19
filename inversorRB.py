@@ -8,7 +8,7 @@ import colorsys
 
 #matplotlib inline
 
-imagen = Image.open("./Screenshot.png")
+imagen = Image.open("./cielo.jpg")
 RGBarr = np.asarray(imagen)
 
 #print imagen.size
@@ -36,9 +36,9 @@ newRGB[..., 0] = blue
 newRGB[..., 1] = green
 newRGB[..., 2] = red
 
-nueva = Image.fromarray(newRGB)
+nueva = Image.fromarray(newRGB, 'RGB')
 
-nueva.save('nueva1.png')
+nueva.save('nueva.png')
 
 nueva.show() 
 

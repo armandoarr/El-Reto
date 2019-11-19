@@ -1,0 +1,11 @@
+Crear un repo de git donde registres regularmente los progresos que lleves 
+de la prueba, al final debes subirlo a algún sistema público
+(github, gitlab, bitbucket) 20%
+Crear un código en python que lea una imagen del disco duro, intercambie la 
+banda roja y la banda azul, y después guarde la nueva imagen en disco con 
+otro nombre. 40%
+Preparar este código para que no tenga fijas (o hardcodeadas) las rutas a las 
+imágenes para poder llamarlo desde la línea de comandos, cualquier método que 
+elijas para lograr ésto es válido, de forma que al final quede una herramienta 
+que se pueda utilizar para intercambiar las bandas de las imágenes. 10%
+Crear una imagen de docker con este script 30%
